@@ -1,0 +1,408 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A2B0331A2CE2217D00A06994 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2B033142CE2217D00A06994 /* Preview Assets.xcassets */; };
+		A2B0331B2CE2217D00A06994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2B033172CE2217D00A06994 /* Assets.xcassets */; };
+		A2B0331C2CE2217D00A06994 /* AlipayDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B033162CE2217D00A06994 /* AlipayDemoApp.swift */; };
+		A2B0331D2CE2217D00A06994 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B033182CE2217D00A06994 /* ContentView.swift */; };
+		A2B0331F2CE2FED700A06994 /* Alibaba Sans Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A2B0331E2CE2FED700A06994 /* Alibaba Sans Medium.otf */; };
+		A2B033242CE476E000A06994 /* ImageDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B033232CE476E000A06994 /* ImageDemo.swift */; };
+		A2B033262CE4A4BC00A06994 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B033252CE4A4BC00A06994 /* InputView.swift */; };
+		A2B0339B2CE5A97A00A06994 /* Code.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B0339A2CE5A97A00A06994 /* Code.swift */; };
+		A2B0339F2CE5BE1400A06994 /* AnimationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B0339E2CE5BE1400A06994 /* AnimationTest.swift */; };
+		A2B033F82CE6F12800A06994 /* AlipayDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B033F72CE6F12800A06994 /* AlipayDemoView.swift */; };
+		A2B033FA2CE6F15400A06994 /* Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B033F92CE6F15400A06994 /* Ex.swift */; };
+		A2B033FC2CE6F38B00A06994 /* SystemUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B033FB2CE6F38B00A06994 /* SystemUIView.swift */; };
+		A2B033FE2CE6F41200A06994 /* WechatDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B033FD2CE6F41200A06994 /* WechatDemo.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A2B033032CE2217400A06994 /* AlipayDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlipayDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2B033142CE2217D00A06994 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A2B033162CE2217D00A06994 /* AlipayDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlipayDemoApp.swift; sourceTree = "<group>"; };
+		A2B033172CE2217D00A06994 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2B033182CE2217D00A06994 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A2B0331E2CE2FED700A06994 /* Alibaba Sans Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alibaba Sans Medium.otf"; sourceTree = "<group>"; };
+		A2B033202CE2FEF000A06994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A2B033232CE476E000A06994 /* ImageDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDemo.swift; sourceTree = "<group>"; };
+		A2B033252CE4A4BC00A06994 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		A2B0339A2CE5A97A00A06994 /* Code.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Code.swift; sourceTree = "<group>"; };
+		A2B0339E2CE5BE1400A06994 /* AnimationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTest.swift; sourceTree = "<group>"; };
+		A2B033F72CE6F12800A06994 /* AlipayDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlipayDemoView.swift; sourceTree = "<group>"; };
+		A2B033F92CE6F15400A06994 /* Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex.swift; sourceTree = "<group>"; };
+		A2B033FB2CE6F38B00A06994 /* SystemUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemUIView.swift; sourceTree = "<group>"; };
+		A2B033FD2CE6F41200A06994 /* WechatDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WechatDemo.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2B033002CE2217400A06994 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A2B032FA2CE2217400A06994 = {
+			isa = PBXGroup;
+			children = (
+				A2B0339A2CE5A97A00A06994 /* Code.swift */,
+				A2B033252CE4A4BC00A06994 /* InputView.swift */,
+				A2B033192CE2217D00A06994 /* AlipayDemo */,
+				A2B033042CE2217400A06994 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A2B033042CE2217400A06994 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2B033032CE2217400A06994 /* AlipayDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2B033152CE2217D00A06994 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A2B033142CE2217D00A06994 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A2B033192CE2217D00A06994 /* AlipayDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A2B033202CE2FEF000A06994 /* Info.plist */,
+				A2B033162CE2217D00A06994 /* AlipayDemoApp.swift */,
+				A2B033172CE2217D00A06994 /* Assets.xcassets */,
+				A2B033182CE2217D00A06994 /* ContentView.swift */,
+				A2B033FD2CE6F41200A06994 /* WechatDemo.swift */,
+				A2B033FB2CE6F38B00A06994 /* SystemUIView.swift */,
+				A2B033F72CE6F12800A06994 /* AlipayDemoView.swift */,
+				A2B033F92CE6F15400A06994 /* Ex.swift */,
+				A2B033F62CE6F0FD00A06994 /* Test */,
+				A2B033F52CE6F0E900A06994 /* Font */,
+				A2B033152CE2217D00A06994 /* Preview Content */,
+			);
+			path = AlipayDemo;
+			sourceTree = "<group>";
+		};
+		A2B033F52CE6F0E900A06994 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				A2B0331E2CE2FED700A06994 /* Alibaba Sans Medium.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		A2B033F62CE6F0FD00A06994 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				A2B0339E2CE5BE1400A06994 /* AnimationTest.swift */,
+				A2B033232CE476E000A06994 /* ImageDemo.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A2B033022CE2217400A06994 /* AlipayDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2B033112CE2217500A06994 /* Build configuration list for PBXNativeTarget "AlipayDemo" */;
+			buildPhases = (
+				A2B032FF2CE2217400A06994 /* Sources */,
+				A2B033002CE2217400A06994 /* Frameworks */,
+				A2B033012CE2217400A06994 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlipayDemo;
+			packageProductDependencies = (
+			);
+			productName = AlipayDemo;
+			productReference = A2B033032CE2217400A06994 /* AlipayDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2B032FB2CE2217400A06994 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					A2B033022CE2217400A06994 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = A2B032FE2CE2217400A06994 /* Build configuration list for PBXProject "AlipayDemo" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A2B032FA2CE2217400A06994;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A2B033042CE2217400A06994 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2B033022CE2217400A06994 /* AlipayDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2B033012CE2217400A06994 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2B0331A2CE2217D00A06994 /* Preview Assets.xcassets in Resources */,
+				A2B0331B2CE2217D00A06994 /* Assets.xcassets in Resources */,
+				A2B0331F2CE2FED700A06994 /* Alibaba Sans Medium.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2B032FF2CE2217400A06994 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2B033FC2CE6F38B00A06994 /* SystemUIView.swift in Sources */,
+				A2B033FA2CE6F15400A06994 /* Ex.swift in Sources */,
+				A2B033FE2CE6F41200A06994 /* WechatDemo.swift in Sources */,
+				A2B0331C2CE2217D00A06994 /* AlipayDemoApp.swift in Sources */,
+				A2B033262CE4A4BC00A06994 /* InputView.swift in Sources */,
+				A2B0339F2CE5BE1400A06994 /* AnimationTest.swift in Sources */,
+				A2B0331D2CE2217D00A06994 /* ContentView.swift in Sources */,
+				A2B033242CE476E000A06994 /* ImageDemo.swift in Sources */,
+				A2B0339B2CE5A97A00A06994 /* Code.swift in Sources */,
+				A2B033F82CE6F12800A06994 /* AlipayDemoView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A2B0330F2CE2217500A06994 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A2B033102CE2217500A06994 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A2B033122CE2217500A06994 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AlipayDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = 6UB6WM6VQR;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AlipayDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fantasy.AlipayDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A2B033132CE2217500A06994 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AlipayDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = 6UB6WM6VQR;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AlipayDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fantasy.AlipayDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2B032FE2CE2217400A06994 /* Build configuration list for PBXProject "AlipayDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2B0330F2CE2217500A06994 /* Debug */,
+				A2B033102CE2217500A06994 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2B033112CE2217500A06994 /* Build configuration list for PBXNativeTarget "AlipayDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2B033122CE2217500A06994 /* Debug */,
+				A2B033132CE2217500A06994 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A2B032FB2CE2217400A06994 /* Project object */;
+}
