@@ -17,7 +17,6 @@ struct ContentView: View {
                     .font(.largeTitle)
                 NavigationLink("系统控件一览") {
                     SystemUIView()
-                        .navigationBarBackButtonHidden()
                 }
                 NavigationLink("支付宝付款记录生成器") {
                     AlipayDemoView()
