@@ -1,14 +1,57 @@
 import SwiftUI
 
+func avatarView(_ uiimage: UIImage?) -> some View {
+    Group {
+        if uiimage != nil {
+            Image(uiImage: uiimage!)
+                .resizable()
+                .scaledToFill()
+                .frame(width: 44, height: 44)
+                .clipShape(RoundedRectangle(cornerRadius: 8))
+        } else {
+            RoundedRectangle(cornerRadius: 8)
+                .foregroundColor(.gray.opacity(0.6))
+                .frame(width: 44, height: 44)
+        }
+    }
+}
 
+// 优化后的消息类型枚举
+enum MessageType {
+    case text(String)
+    case transfer(amount: Double)
+    case timestamp(String)
+    case video
+    case photo
+    case url
+    case muisc
+    
+    // 添加一个计算属性来获取消息内容
+    var content: String {
+        switch self {
+        case .text(let str): return str
+        case .transfer(let amount): return String(format: "%.2f", amount)
+        case .timestamp(let str): return str
+        default: return ""
+        }
+    }
+}
+
+// 优化后的消息结构体
+struct Message: Identifiable {
+    let id = UUID()
+    let type: MessageType
+    let isMine: Bool
+}
 
 
 struct WechatDemo: View {
     @Environment(\.dismiss) var dismiss
-    @State var showEditView  : Bool = false
+    @State var showEditView  : Bool = true
     @State var avatar1 : UIImage?
+    @State var avatar2 : UIImage?
     // 使用优化后的数据结构重构消息数组
-    let messages: [Message] = [
+    @State var messages: [Message] = [
         Message(type: .text("咱们现在周末还有课吗？"), isMine: false),
         Message(type: .timestamp("2月15日 10:15"), isMine: true),
         Message(type: .text("有的"), isMine: true),
@@ -20,33 +63,6 @@ struct WechatDemo: View {
         Message(type: .text("入帐后发你"), isMine: true)
     ]
     
-    // 优化后的消息类型枚举
-    enum MessageType {
-        case text(String)
-        case transfer(amount: Double)
-        case timestamp(String)
-        case video
-        case photo
-        case url
-        case muisc
-        
-        // 添加一个计算属性来获取消息内容
-        var content: String {
-            switch self {
-            case .text(let str): return str
-            case .transfer(let amount): return String(format: "%.2f", amount)
-            case .timestamp(let str): return str
-            default: return ""
-            }
-        }
-    }
-
-    // 优化后的消息结构体
-    struct Message: Identifiable {
-        let id = UUID()
-        let type: MessageType
-        let isMine: Bool
-    }
 
     
     
@@ -66,7 +82,7 @@ struct WechatDemo: View {
             fakeWechatBottomImage
         }
         .fullScreenCover(isPresented: $showEditView, content: {
-            MessagesEditView(avatar1: $avatar1)
+            MessagesEditView(avatar1: $avatar1,avatar2: $avatar2,messages: $messages)
         })
         .ignoresSafeArea(.all, edges: .bottom)
         .background(Color(hex: "EDEDED"))
@@ -113,7 +129,7 @@ struct WechatDemo: View {
             if message.isMine {
                 Spacer()
             } else {
-                avatarView
+                avatarView(avatar2)
             }
             
             switch message.type {
@@ -126,18 +142,14 @@ struct WechatDemo: View {
             }
             
             if message.isMine {
-                avatarView
+                avatarView(avatar1)
             } else {
                 Spacer()
             }
         }
     }
     
-    private var avatarView: some View {
-        RoundedRectangle(cornerRadius: 8)
-            .foregroundColor(.gray.opacity(0.6))
-            .frame(width: 44, height: 44)
-    }
+ 
     
     func textMessageView(_ text: String, isMine: Bool) -> some View {
         Text(text)
