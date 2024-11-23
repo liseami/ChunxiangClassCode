@@ -6,7 +6,7 @@ import SwiftUI
 struct WechatDemo: View {
     @Environment(\.dismiss) var dismiss
     @State var showEditView  : Bool = false
-
+    @State var avatar1 : UIImage?
     // 使用优化后的数据结构重构消息数组
     let messages: [Message] = [
         Message(type: .text("咱们现在周末还有课吗？"), isMine: false),
@@ -65,6 +65,9 @@ struct WechatDemo: View {
             /// 虚假的微信底部模拟仿真图片
             fakeWechatBottomImage
         }
+        .fullScreenCover(isPresented: $showEditView, content: {
+            MessagesEditView(avatar1: $avatar1)
+        })
         .ignoresSafeArea(.all, edges: .bottom)
         .background(Color(hex: "EDEDED"))
     }
@@ -202,7 +205,7 @@ struct WechatDemo: View {
                 
                 Spacer()
                 
-                Button(action: { dismiss() }) {
+                Button(action: { showEditView = true }) {
                     Image(systemName: "ellipsis")
                         .font(.title2)
                         .foregroundStyle(.black)

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A23F34572CF19D1E00FD62CB /* MessagesEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F34562CF19D1E00FD62CB /* MessagesEditView.swift */; };
+		A23F345A2CF19E8F00FD62CB /* ImagePickerSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = A23F34592CF19E8F00FD62CB /* ImagePickerSwiftUI */; };
 		A2B0331A2CE2217D00A06994 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2B033142CE2217D00A06994 /* Preview Assets.xcassets */; };
 		A2B0331B2CE2217D00A06994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2B033172CE2217D00A06994 /* Assets.xcassets */; };
 		A2B0331C2CE2217D00A06994 /* AlipayDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B033162CE2217D00A06994 /* AlipayDemoApp.swift */; };
@@ -23,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A23F34562CF19D1E00FD62CB /* MessagesEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesEditView.swift; sourceTree = "<group>"; };
 		A2B033032CE2217400A06994 /* AlipayDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlipayDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B033142CE2217D00A06994 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A2B033162CE2217D00A06994 /* AlipayDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlipayDemoApp.swift; sourceTree = "<group>"; };
@@ -45,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A23F345A2CF19E8F00FD62CB /* ImagePickerSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +89,7 @@
 				A2B033172CE2217D00A06994 /* Assets.xcassets */,
 				A2B033182CE2217D00A06994 /* ContentView.swift */,
 				A2B033FD2CE6F41200A06994 /* WechatDemo.swift */,
+				A23F34562CF19D1E00FD62CB /* MessagesEditView.swift */,
 				A2B033FB2CE6F38B00A06994 /* SystemUIView.swift */,
 				A2B033F72CE6F12800A06994 /* AlipayDemoView.swift */,
 				A2B033F92CE6F15400A06994 /* Ex.swift */,
@@ -129,6 +134,7 @@
 			);
 			name = AlipayDemo;
 			packageProductDependencies = (
+				A23F34592CF19E8F00FD62CB /* ImagePickerSwiftUI */,
 			);
 			productName = AlipayDemo;
 			productReference = A2B033032CE2217400A06994 /* AlipayDemo.app */;
@@ -159,6 +165,7 @@
 			mainGroup = A2B032FA2CE2217400A06994;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				A23F34582CF19E8F00FD62CB /* XCRemoteSwiftPackageReference "ImagePickerSwiftUI" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A2B033042CE2217400A06994 /* Products */;
@@ -196,6 +203,7 @@
 				A2B0339F2CE5BE1400A06994 /* AnimationTest.swift in Sources */,
 				A2B0331D2CE2217D00A06994 /* ContentView.swift in Sources */,
 				A2B033242CE476E000A06994 /* ImageDemo.swift in Sources */,
+				A23F34572CF19D1E00FD62CB /* MessagesEditView.swift in Sources */,
 				A2B0339B2CE5A97A00A06994 /* Code.swift in Sources */,
 				A2B033F82CE6F12800A06994 /* AlipayDemoView.swift in Sources */,
 			);
@@ -405,6 +413,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A23F34582CF19E8F00FD62CB /* XCRemoteSwiftPackageReference "ImagePickerSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tsuzukihashi/ImagePickerSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A23F34592CF19E8F00FD62CB /* ImagePickerSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A23F34582CF19E8F00FD62CB /* XCRemoteSwiftPackageReference "ImagePickerSwiftUI" */;
+			productName = ImagePickerSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A2B032FB2CE2217400A06994 /* Project object */;
 }
