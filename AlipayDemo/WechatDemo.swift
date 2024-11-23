@@ -172,11 +172,24 @@ struct WechatDemo: View {
         .padding(.bottom, 6)
         .foregroundColor(.white)
         .padding(.horizontal)
+<<<<<<< Updated upstream
         .frame(width: 234, height: 80)
         .background(RoundedRectangle(cornerRadius: 4).foregroundColor(Color(hex: "FDE1C3")))
         .overlay(alignment: isMine ? .topTrailing : .topLeading) {
             messageTriangle(color: Color(hex: "FDE1C3"), isMine: isMine)
                 .padding(.top, 13)
+=======
+        .frame(width: 234, height: 80, alignment: .center)
+        .background(RoundedRectangle(cornerRadius: 4)
+            .foregroundColor(.init(hex: "FDE1C3")))
+        .overlay(alignment: message.isMine ? .topTrailing : .topLeading) {
+            RoundedRectangle(cornerRadius: 3)
+                .frame(width: 10, height: 10, alignment: .center)
+                .foregroundColor(Color(hex: "FDE1C3"))
+                .rotationEffect(.degrees(45))
+                .offset(x: message.isMine ? 5 : -5)
+                .padding(.top,13)
+>>>>>>> Stashed changes
         }
     }
     
