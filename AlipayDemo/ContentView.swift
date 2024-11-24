@@ -7,32 +7,69 @@
 
 import SwiftUI
 
+class MainViewModel: ObservableObject {
+    @Published var currentTabbar: TabbarType = .system
+    enum TabbarType : String, CaseIterable {
+        case system = "主页"
+        case demo = "模拟器"
+        case profile = "我的"
+    }
+}
+
 struct ContentView: View {
-    
-    
-    var body: some View{
+    @StateObject var vm: MainViewModel = .init()
+    var body: some View {
         NavigationView {
             VStack(alignment: .center, spacing: 24) {
                 Text("纯想百宝箱")
                     .font(.largeTitle)
-                NavigationLink("系统控件一览") {
+
+                switch vm.currentTabbar {
+                case .system:
                     SystemUIView()
+                case .demo:
+                    DemosView()
+                case .profile:
+                    Text("个人主页")
                 }
-                NavigationLink("支付宝付款记录生成器") {
-                    AlipayDemoView()
-                        .navigationBarBackButtonHidden()
+
+                Spacer()
+                HStack {
+                    ForEach(MainViewModel.TabbarType.allCases,id: \.hashValue) { tab in
+                        let imSelected : Bool = (tab == vm.currentTabbar)
+                        Text(String(tab.rawValue))
+                            .bold(imSelected)
+                            .foregroundStyle(imSelected ? Color.blue : Color.black)
+                            .frame(maxWidth:.infinity)
+                            .padding(.vertical,6)
+                            .overlay(content: {
+                                if imSelected{
+                                    RoundedRectangle(cornerRadius: 12)
+                                        .stroke(lineWidth: 1)
+                                        .transition(.scale)
+                                }else{
+                                    EmptyView()
+                                }
+                                
+                            })
+                            .onTapGesture {
+                                vm.currentTabbar = tab
+                        }
+                    }
+//                    Text("模拟器").onTapGesture {
+//                        vm.currentTabbar = .demo
+//                    }
+//                    Text("我的").onTapGesture {
+//                        vm.currentTabbar = .profile
+//                    }
                 }
-                NavigationLink("微信聊天记录生成器") {
-                    WechatDemo()
-                        .navigationBarBackButtonHidden()
-                }
+                .animation(.smooth, value: vm.currentTabbar)
+                .padding(.horizontal)
             }
         }
     }
-
 }
 
 #Preview {
     ContentView()
 }
-

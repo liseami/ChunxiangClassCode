@@ -10,17 +10,7 @@ import SwiftUI
 
 struct MessagesEditView: View {
     @Environment(\.dismiss) var dismiss
-    @State var userTextMessageInput: String = ""
-    @State var userTransMessageInput: String = ""
-    @State var userTimeMessageInput: String = ""
-    @State var showPicker1: Bool = false
-    @State var showPicker2: Bool = false
-    @State var addMessageForMe: Bool = true
-    @State var addMessageType: String = "text"
-
-    @Binding var avatar1: UIImage?
-    @Binding var avatar2: UIImage?
-    @Binding var messages: [Message]
+    @EnvironmentObject var vm :WechatDemoViewModel
     
     var body: some View {
         closeBtn
@@ -42,7 +32,7 @@ struct MessagesEditView: View {
             }
             Spacer()
             Button {
-                self.messages.removeAll()
+                vm.messages.removeAll()
             } label: {
                 Text("清除")
             }
@@ -51,47 +41,47 @@ struct MessagesEditView: View {
 
     var messageAddView: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Picker(selection: $addMessageForMe) {
+            Picker(selection: $vm.addMessageForMe) {
                 Text("对方的消息").tag(false)
                 Text("我的消息").tag(true)
             } label: {}
                 .pickerStyle(.segmented)
 
-//            Text(self.addMessageType)
-            Picker(selection: $addMessageType) {
+//            Text(vm.addMessageType)
+            Picker(selection: $vm.addMessageType) {
                 Text("文字消息").tag("text")
                 Text("转账消息").tag("trans")
                 Text("时间消息").tag("time")
             } label: {}
                 .pickerStyle(.segmented)
 
-            switch self.addMessageType {
+            switch vm.addMessageType {
             case "text":
-                TextField("输入你想添加的文字消息", text: $userTextMessageInput)
+                TextField("输入你想添加的文字消息", text: $vm.userTextMessageInput)
             case "trans":
-                TextField("输入你想添加的转账金额", text: $userTransMessageInput)
+                TextField("输入你想添加的转账金额", text: $vm.userTransMessageInput)
                     .keyboardType(.numberPad)
             case "time":
-                TextField("输入你想添加的时间", text: $userTimeMessageInput)
+                TextField("输入你想添加的时间", text: $vm.userTimeMessageInput)
             default: EmptyView()
             }
             Button("添加一条消息") {
-                if userTextMessageInput.isEmpty, userTransMessageInput.isEmpty, userTimeMessageInput.isEmpty {
+                if vm.userTextMessageInput.isEmpty, vm.userTransMessageInput.isEmpty, vm.userTimeMessageInput.isEmpty {
                 } else {
-                    switch self.addMessageType {
+                    switch vm.addMessageType {
                     case "text":
-                        let new = Message(type: .text(self.userTextMessageInput), isMine: self.addMessageForMe)
-                        self.messages.append(new)
+                        let new = Message(type: .text(vm.userTextMessageInput), isMine: vm.addMessageForMe)
+                        vm.messages.append(new)
                     case "trans":
-                        let new = Message(type: .transfer(amount: Double(self.userTransMessageInput)!), isMine: self.addMessageForMe)
-                        self.messages.append(new)
+                        let new = Message(type: .transfer(amount: Double(vm.userTransMessageInput)!), isMine: vm.addMessageForMe)
+                        vm.messages.append(new)
                     case "time":
-                        let new = Message(type: .timestamp(self.userTimeMessageInput), isMine: self.addMessageForMe)
-                        self.messages.append(new)
+                        let new = Message(type: .timestamp(vm.userTimeMessageInput), isMine: vm.addMessageForMe)
+                        vm.messages.append(new)
                     default: break
                     }
 
-                    self.userTextMessageInput = ""
+                    vm.userTextMessageInput = ""
                 }
             }
         }
@@ -100,7 +90,7 @@ struct MessagesEditView: View {
     }
 
     var messageList: some View {
-        ForEach(self.messages, id: \.id) { message in
+        ForEach(vm.messages, id: \.id) { message in
             Group{
                 switch message.type {
                 case .text(let str):
@@ -117,7 +107,7 @@ struct MessagesEditView: View {
             }
             .contextMenu {
                 Button {
-                    self.messages.removeAll { target in
+                    vm.messages.removeAll { target in
                         target.id == message.id
                     }
                 } label: {
@@ -132,34 +122,34 @@ struct MessagesEditView: View {
     var avatarButtons: some View {
         Group {
             Button {
-                showPicker1 = true
+                vm.showPicker1 = true
             } label: {
                 HStack(alignment: .center, spacing: 12) {
                     Text("我的头像")
                     Spacer()
-                    avatarView(self.avatar1)
+                    avatarView(vm.avatar1)
                 }
             }
-            .sheet(isPresented: $showPicker1) {
+            .sheet(isPresented: $vm.showPicker1) {
                 ImagePickerSwiftUI(
-                    selectedImage: $avatar1,
+                    selectedImage: $vm.avatar1,
                     sourceType: .photoLibrary, // or .photoLibrary
                     allowsEditing: false
                 )
             }
 
             Button(action: {
-                showPicker2 = true
+                vm.showPicker2 = true
             }, label: {
                 HStack(alignment: .center, spacing: 12) {
-                    avatarView(self.avatar2)
+                    avatarView(vm.avatar2)
                     Spacer()
                     Text("对方头像")
                 }
             })
-            .sheet(isPresented: $showPicker2) {
+            .sheet(isPresented: $vm.showPicker2) {
                 ImagePickerSwiftUI(
-                    selectedImage: $avatar2,
+                    selectedImage: $vm.avatar2,
                     sourceType: .photoLibrary, // or .photoLibrary
                     allowsEditing: false
                 )
@@ -172,4 +162,5 @@ struct MessagesEditView: View {
 
 #Preview {
     WechatDemo()
+        .environmentObject(WechatDemoViewModel.init())
 }
