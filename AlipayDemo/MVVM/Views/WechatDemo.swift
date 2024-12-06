@@ -90,6 +90,7 @@ struct WechatDemo: View {
                 avatarView(vm.avatar1)
             } else {
                 Spacer()
+                
             }
         }
     }
