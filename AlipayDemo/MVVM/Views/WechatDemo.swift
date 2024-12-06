@@ -7,19 +7,6 @@
 
 import SwiftUI
 
-<<<<<<< Updated upstream:AlipayDemo/WechatDemo.swift
-struct WechatDemo: View {
-    @Environment(\.dismiss) var dismiss
-    
-    struct Message {
-        var text: String
-        var isMine: Bool
-        var isTrans: Bool = false
-        var amount : Double = 299
-        var isTime : Bool = false
-        var timeStr : String = ""
-    }
-=======
 func avatarView(_ uiimage: UIImage?) -> some View {
     Group {
         if uiimage != nil {
@@ -40,165 +27,173 @@ func avatarView(_ uiimage: UIImage?) -> some View {
 
 
 
-
 struct WechatDemo: View {
     @Environment(\.dismiss) var dismiss
     @StateObject var vm : WechatDemoViewModel = .init()
-    @ObservedObject var tostaVM : TostaUIViewModel = .shared
->>>>>>> Stashed changes:AlipayDemo/MVVM/Views/WechatDemo.swift
     
-    var messages: [Message] = [Message(text: "咱们现在周末还有课吗？", isMine: false),
-                               Message(text: "有的", isMine: true),
-                               Message(text: "好的，299是吧，直接转给你么", isMine: false),
-                               Message(text: "是的", isMine: true),
-                               Message(text: "转账299", isMine: false, isTrans: true),
-                               Message(text: "收款299", isMine: true, isTrans: true),
-                               Message(text: "怎么看回放？", isMine: false),
-                               Message(text: "入帐后发你", isMine: true)]
+    
+    
+    
+    
+    
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
+            /// 顶部标题栏
             navigationBar
-           
-            ScrollView {
-                VStack(alignment: .center, spacing: 24) {
-                    ForEach(messages, id: \.text) { message in
-                        text(message)
-                    }
-                }
-                .padding()
-            }
-
-            Spacer()
-            Image("WechatBottomBar")
-                .resizable()
-                .scaledToFit()
-                .frame(maxWidth: UIScreen.main.bounds.width)
-//                .frame(height: 53)
+            /// 消息滚动列表
+            messageList
+            /// 虚假的微信底部模拟仿真图片
+            fakeWechatBottomImage
         }
-<<<<<<< Updated upstream:AlipayDemo/WechatDemo.swift
-=======
         .fullScreenCover(isPresented: $vm.showEditView, content: {
             MessagesEditView()
-                .overlay(alignment: .bottom) {
-                    if tostaVM.showBottomTosta {
-                        Text("我是一条通知")
-                            .foregroundColor(.white)
-                            .padding(.all)
-                            .background(Color.green)
-                            .clipShape(RoundedRectangle(cornerRadius: 12))
-                            .transition(.scale.combined(with: .opacity).combined(with: .move(edge: .bottom)))
-                    }
-                }
                 .environmentObject(vm)
         })
->>>>>>> Stashed changes:AlipayDemo/MVVM/Views/WechatDemo.swift
         .ignoresSafeArea(.all, edges: .bottom)
         .background(Color(hex: "EDEDED"))
     }
     
-    func text(_ message : Message) -> some View {
-        HStack(alignment: .top,spacing:16){
-            if message.isMine{
-                Spacer()
-            }else{
-                RoundedRectangle(cornerRadius: 8)
-                    .foregroundColor(.gray.opacity(0.6))
-                    .frame(width: 44, height: 44, alignment: .center)
-            }
-            if message.isTrans{
-                transMessage(message)
-            }else{
-                Text(message.text)
-                    .padding(.horizontal)
-                    .padding(.vertical,13)
-                    .background(message.isMine ? Color(hex: "95EC69") : .white)
-                    .clipShape(RoundedRectangle(cornerRadius: 6))
-                    .overlay(alignment: message.isMine ? .trailing : .leading) {
-                        RoundedRectangle(cornerRadius: 3)
-                            .frame(width: 10, height: 10, alignment: .center)
-                            .foregroundColor(message.isMine ? Color(hex: "95EC69") : .white)
-                            .rotationEffect(.degrees(45))
-                            .offset(x: message.isMine ? 5 : -5)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    var fakeWechatBottomImage: some View {
+        Image("WechatBottomBar")
+            .resizable()
+            .scaledToFit()
+            .frame(maxWidth: UIScreen.main.bounds.width)
+    }
+    
+    var messageList: some View {
+        ScrollView {
+            VStack(alignment: .center, spacing: 24) {
+                ForEach(vm.messages) { message in
+                    switch message.type {
+                    case .text, .transfer:
+                        messageView(message)
+                    case .timestamp(let str):
+                        Text(str)
+                            .opacity(0.22437)
+                    default: EmptyView()
                     }
+                }
             }
-         
-            if message.isMine{
-                RoundedRectangle(cornerRadius: 8)
-                    .foregroundColor(.gray.opacity(0.6))
-                    .frame(width: 44, height: 44, alignment: .center)
-            }else{
+            .padding()
+        }
+    }
+    
+    func messageView(_ message: Message) -> some View {
+        HStack(alignment: .top, spacing: 16) {
+            if message.isMine {
                 Spacer()
-                
+            } else {
+                avatarView(vm.avatar2)
+            }
+            
+            switch message.type {
+            case .text(let text):
+                textMessageView(text, isMine: message.isMine)
+            case .transfer(let amount):
+                transferMessageView(amount: amount, isMine: message.isMine)
+            default:
+                EmptyView()
+            }
+            
+            if message.isMine {
+                avatarView(vm.avatar1)
+            } else {
+                Spacer()
             }
         }
     }
     
-    func transMessage(_ message : Message) -> some View {
-        
-        VStack(alignment: .leading){
+ 
+    
+    func textMessageView(_ text: String, isMine: Bool) -> some View {
+        Text(text)
+            .padding(.horizontal)
+            .padding(.vertical, 13)
+            .background(isMine ? Color(hex: "95EC69") : .white)
+            .clipShape(RoundedRectangle(cornerRadius: 6))
+            .overlay(alignment: isMine ? .trailing : .leading) {
+                messageTriangle(color: isMine ? Color(hex: "95EC69") : .white, isMine: isMine)
+            }
+    }
+    
+    func transferMessageView(amount: Double, isMine: Bool) -> some View {
+        VStack(alignment: .leading) {
             Spacer()
-            HStack{
+            HStack {
                 Image(systemName: "checkmark.circle")
                     .font(.largeTitle)
-                VStack(alignment: .leading,spacing: 4){
-                    Text("¥\(String.init(format: "%.2f", message.amount))")
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("¥\(String(format: "%.2f", amount))")
                         .font(.subheadline)
                         .bold()
-                    Text(message.isMine ?  "已收款" : "已被接受")
+                    Text(isMine ? "已收款" : "已被接受")
                         .font(.caption2)
                         .bold()
                 }
                 Spacer()
             }
-            Rectangle().frame( height: 0.5, alignment: .center)
-                .foregroundColor(.white)
-                .opacity(0.3)
+            Rectangle()
+                .frame(height: 1)
+                .foregroundColor(.white.opacity(0.2))
             Text("微信转账")
                 .font(.caption2)
         }
-        .padding(.bottom,6)
+        .padding(.bottom, 6)
         .foregroundColor(.white)
         .padding(.horizontal)
-        .frame(width: 234, height: 80, alignment: .center)
-        .background(RoundedRectangle(cornerRadius: 4)
-            .foregroundColor(.init(hex: "FA9D3B")))
-        .overlay(alignment: message.isMine ? .topTrailing : .topLeading) {
-            RoundedRectangle(cornerRadius: 3)
-                .frame(width: 10, height: 10, alignment: .center)
-                .foregroundColor(Color(hex: "FA9D3B"))
-                .rotationEffect(.degrees(45))
-                .offset(x: message.isMine ? 5 : -5)
-                .padding(.top,13)
+
+        .frame(width: 234, height: 80)
+        .background(RoundedRectangle(cornerRadius: 4).foregroundColor(Color(hex: "FDE1C3")))
+        .overlay(alignment: isMine ? .topTrailing : .topLeading) {
+            messageTriangle(color: Color(hex: "FDE1C3"), isMine: isMine)
+                .padding(.top, 13)
+
         }
-        
-        
-            
+    }
+    
+    func messageTriangle(color: Color, isMine: Bool) -> some View {
+        RoundedRectangle(cornerRadius: 3)
+            .frame(width: 10, height: 10)
+            .foregroundColor(color)
+            .rotationEffect(.degrees(45))
+            .offset(x: isMine ? 5 : -5)
     }
     
     var navigationBar: some View {
         VStack(alignment: .center, spacing: 12) {
             HStack {
-                Image(systemName: "chevron.down")
-                    .font(.title2)
-                    .foregroundStyle(.black)
-                    .rotationEffect(.init(degrees: 90))
-                    .onTapGesture {
-                        dismiss()
-                    }
+                Button(action: { dismiss() }) {
+                    Image(systemName: "chevron.down")
+                        .font(.title2)
+                        .foregroundStyle(.black)
+                        .rotationEffect(.degrees(90))
+                }
+                
                 Spacer()
-                Image(systemName: "ellipsis")
-                    .font(.title2)
-                    .foregroundStyle(.black)
-                    .onTapGesture {
-                        dismiss()
-                    }
+                
+                Button(action: { vm.showEditView = true }) {
+                    Image(systemName: "ellipsis")
+                        .font(.title2)
+                        .foregroundStyle(.black)
+                }
             }
             .padding(.horizontal)
             .overlay {
                 Text("某某某")
-                    .font(Font.title3)
-                    .bold()
+                    .font(.title3)
             }
+            
             Rectangle()
                 .foregroundColor(Color(hex: "D5D5D5"))
                 .frame(height: 1)

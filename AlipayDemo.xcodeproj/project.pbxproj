@@ -25,6 +25,9 @@
 		A2CFEDCD2D03018C001FD79C /* WechatDemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFEDCC2D03018C001FD79C /* WechatDemoViewModel.swift */; };
 		A2CFEDCF2D0301D1001FD79C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFEDCE2D0301D1001FD79C /* Message.swift */; };
 		A2CFEDD22D03068A001FD79C /* Toasts in Frameworks */ = {isa = PBXBuildFile; productRef = A2CFEDD12D03068A001FD79C /* Toasts */; };
+		A2CFEDD32D030CF3001FD79C /* ImagePickerSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = A23F34592CF19E8F00FD62CB /* ImagePickerSwiftUI */; };
+		A2CFEDD52D030D43001FD79C /* DemosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFEDD42D030D43001FD79C /* DemosView.swift */; };
+		A2CFEDD72D0336BF001FD79C /* MessagesEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFEDD62D0336BE001FD79C /* MessagesEditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +50,8 @@
 		A2CFEDCA2D03015A001FD79C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		A2CFEDCC2D03018C001FD79C /* WechatDemoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WechatDemoViewModel.swift; sourceTree = "<group>"; };
 		A2CFEDCE2D0301D1001FD79C /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		A2CFEDD42D030D43001FD79C /* DemosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemosView.swift; sourceTree = "<group>"; };
+		A2CFEDD62D0336BE001FD79C /* MessagesEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesEditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,11 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< Updated upstream
-=======
+				A2CFEDD32D030CF3001FD79C /* ImagePickerSwiftUI in Frameworks */,
 				A2CFEDD22D03068A001FD79C /* Toasts in Frameworks */,
-				A23F345A2CF19E8F00FD62CB /* ImagePickerSwiftUI in Frameworks */,
->>>>>>> Stashed changes
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,13 +100,6 @@
 				A2B033202CE2FEF000A06994 /* Info.plist */,
 				A2B033162CE2217D00A06994 /* AlipayDemoApp.swift */,
 				A2B033172CE2217D00A06994 /* Assets.xcassets */,
-<<<<<<< Updated upstream
-				A2B033182CE2217D00A06994 /* ContentView.swift */,
-				A2B033FD2CE6F41200A06994 /* WechatDemo.swift */,
-				A2B033FB2CE6F38B00A06994 /* SystemUIView.swift */,
-				A2B033F72CE6F12800A06994 /* AlipayDemoView.swift */,
-=======
->>>>>>> Stashed changes
 				A2B033F92CE6F15400A06994 /* Ex.swift */,
 				A2B033F62CE6F0FD00A06994 /* Test */,
 				A2B033F52CE6F0E900A06994 /* Font */,
@@ -143,13 +138,13 @@
 		A2CFEDC72D030132001FD79C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A2CFEDD42D030D43001FD79C /* DemosView.swift */,
 				A2B033182CE2217D00A06994 /* ContentView.swift */,
 				A2CFEDC42D0300F1001FD79C /* TabbarView.swift */,
-				A23F346C2CF315C400FD62CB /* DemosView.swift */,
 				A2B033FD2CE6F41200A06994 /* WechatDemo.swift */,
-				A23F34562CF19D1E00FD62CB /* MessagesEditView.swift */,
 				A2B033FB2CE6F38B00A06994 /* SystemUIView.swift */,
 				A2B033F72CE6F12800A06994 /* AlipayDemoView.swift */,
+				A2CFEDD62D0336BE001FD79C /* MessagesEditView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,11 +183,8 @@
 			);
 			name = AlipayDemo;
 			packageProductDependencies = (
-<<<<<<< Updated upstream
-=======
 				A23F34592CF19E8F00FD62CB /* ImagePickerSwiftUI */,
 				A2CFEDD12D03068A001FD79C /* Toasts */,
->>>>>>> Stashed changes
 			);
 			productName = AlipayDemo;
 			productReference = A2B033032CE2217400A06994 /* AlipayDemo.app */;
@@ -222,13 +214,10 @@
 			);
 			mainGroup = A2B032FA2CE2217400A06994;
 			minimizedProjectReferenceProxies = 1;
-<<<<<<< Updated upstream
-=======
 			packageReferences = (
 				A23F34582CF19E8F00FD62CB /* XCRemoteSwiftPackageReference "ImagePickerSwiftUI" */,
 				A2CFEDD02D03068A001FD79C /* XCRemoteSwiftPackageReference "swiftui-toasts" */,
 			);
->>>>>>> Stashed changes
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A2B033042CE2217400A06994 /* Products */;
 			projectDirPath = "";
@@ -266,12 +255,10 @@
 				A2CFEDCB2D03015A001FD79C /* MainViewModel.swift in Sources */,
 				A2B0331D2CE2217D00A06994 /* ContentView.swift in Sources */,
 				A2B033242CE476E000A06994 /* ImageDemo.swift in Sources */,
-<<<<<<< Updated upstream
-=======
-				A23F34572CF19D1E00FD62CB /* MessagesEditView.swift in Sources */,
 				A2CFEDCD2D03018C001FD79C /* WechatDemoViewModel.swift in Sources */,
->>>>>>> Stashed changes
+				A2CFEDD72D0336BF001FD79C /* MessagesEditView.swift in Sources */,
 				A2B0339B2CE5A97A00A06994 /* Code.swift in Sources */,
+				A2CFEDD52D030D43001FD79C /* DemosView.swift in Sources */,
 				A2CFEDCF2D0301D1001FD79C /* Message.swift in Sources */,
 				A2B033F82CE6F12800A06994 /* AlipayDemoView.swift in Sources */,
 				A2CFEDC52D0300F1001FD79C /* TabbarView.swift in Sources */,
@@ -482,8 +469,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-<<<<<<< Updated upstream
-=======
 
 /* Begin XCRemoteSwiftPackageReference section */
 		A23F34582CF19E8F00FD62CB /* XCRemoteSwiftPackageReference "ImagePickerSwiftUI" */ = {
@@ -516,7 +501,6 @@
 			productName = Toasts;
 		};
 /* End XCSwiftPackageProductDependency section */
->>>>>>> Stashed changes
 	};
 	rootObject = A2B032FB2CE2217400A06994 /* Project object */;
 }
