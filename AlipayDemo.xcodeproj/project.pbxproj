@@ -37,7 +37,7 @@
 		A2B033172CE2217D00A06994 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2B033182CE2217D00A06994 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A2B0331E2CE2FED700A06994 /* Alibaba Sans Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alibaba Sans Medium.otf"; sourceTree = "<group>"; };
-		A2B033202CE2FEF000A06994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A2B033202CE2FEF000A06994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2B033232CE476E000A06994 /* ImageDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDemo.swift; sourceTree = "<group>"; };
 		A2B033252CE4A4BC00A06994 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		A2B0339A2CE5A97A00A06994 /* Code.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Code.swift; sourceTree = "<group>"; };
@@ -71,7 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				A2B0339A2CE5A97A00A06994 /* Code.swift */,
-				A2B033252CE4A4BC00A06994 /* InputView.swift */,
 				A2B033192CE2217D00A06994 /* AlipayDemo */,
 				A2B033042CE2217400A06994 /* Products */,
 			);
@@ -96,11 +95,11 @@
 		A2B033192CE2217D00A06994 /* AlipayDemo */ = {
 			isa = PBXGroup;
 			children = (
-				A2CFEDC62D030129001FD79C /* MVVM */,
 				A2B033202CE2FEF000A06994 /* Info.plist */,
 				A2B033162CE2217D00A06994 /* AlipayDemoApp.swift */,
 				A2B033172CE2217D00A06994 /* Assets.xcassets */,
 				A2B033F92CE6F15400A06994 /* Ex.swift */,
+				A2CFEDC62D030129001FD79C /* MVVM */,
 				A2B033F62CE6F0FD00A06994 /* Test */,
 				A2B033F52CE6F0E900A06994 /* Font */,
 				A2B033152CE2217D00A06994 /* Preview Content */,
@@ -145,6 +144,7 @@
 				A2CFEDD82D03421A001FD79C /* WechatDemo.swift */,
 				A2B033F72CE6F12800A06994 /* AlipayDemoView.swift */,
 				A2CFEDD62D0336BE001FD79C /* MessagesEditView.swift */,
+				A2B033252CE4A4BC00A06994 /* InputView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
