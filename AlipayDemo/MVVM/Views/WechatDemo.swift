@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+<<<<<<< Updated upstream:AlipayDemo/WechatDemo.swift
 struct WechatDemo: View {
     @Environment(\.dismiss) var dismiss
     
@@ -18,6 +19,33 @@ struct WechatDemo: View {
         var isTime : Bool = false
         var timeStr : String = ""
     }
+=======
+func avatarView(_ uiimage: UIImage?) -> some View {
+    Group {
+        if uiimage != nil {
+            Image(uiImage: uiimage!)
+                .resizable()
+                .scaledToFill()
+                .frame(width: 44, height: 44)
+                .clipShape(RoundedRectangle(cornerRadius: 8))
+        } else {
+            RoundedRectangle(cornerRadius: 8)
+                .foregroundColor(.gray.opacity(0.6))
+                .frame(width: 44, height: 44)
+        }
+    }
+}
+
+
+
+
+
+
+struct WechatDemo: View {
+    @Environment(\.dismiss) var dismiss
+    @StateObject var vm : WechatDemoViewModel = .init()
+    @ObservedObject var tostaVM : TostaUIViewModel = .shared
+>>>>>>> Stashed changes:AlipayDemo/MVVM/Views/WechatDemo.swift
     
     var messages: [Message] = [Message(text: "咱们现在周末还有课吗？", isMine: false),
                                Message(text: "有的", isMine: true),
@@ -47,6 +75,23 @@ struct WechatDemo: View {
                 .frame(maxWidth: UIScreen.main.bounds.width)
 //                .frame(height: 53)
         }
+<<<<<<< Updated upstream:AlipayDemo/WechatDemo.swift
+=======
+        .fullScreenCover(isPresented: $vm.showEditView, content: {
+            MessagesEditView()
+                .overlay(alignment: .bottom) {
+                    if tostaVM.showBottomTosta {
+                        Text("我是一条通知")
+                            .foregroundColor(.white)
+                            .padding(.all)
+                            .background(Color.green)
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                            .transition(.scale.combined(with: .opacity).combined(with: .move(edge: .bottom)))
+                    }
+                }
+                .environmentObject(vm)
+        })
+>>>>>>> Stashed changes:AlipayDemo/MVVM/Views/WechatDemo.swift
         .ignoresSafeArea(.all, edges: .bottom)
         .background(Color(hex: "EDEDED"))
     }
@@ -164,4 +209,5 @@ struct WechatDemo: View {
 
 #Preview {
     WechatDemo()
+        
 }

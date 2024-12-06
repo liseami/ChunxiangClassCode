@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import Toasts
 
 @main
 struct AlipayDemoApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .installToast(position: .top)
         }
     }
 }
