@@ -97,13 +97,8 @@ struct WechatDemo: View {
     
     func textMessageView(_ text: String, isMine: Bool) -> some View {
         Text(text)
-            .padding(.horizontal)
-            .padding(.vertical, 13)
-            .background(isMine ? Color(hex: "95EC69") : .white)
-            .clipShape(RoundedRectangle(cornerRadius: 6))
-            .overlay(alignment: isMine ? .trailing : .leading) {
-                messageTriangle(color: isMine ? Color(hex: "95EC69") : .white, isMine: isMine)
-            }
+            .isMessageText(isMine: isMine)
+        
     }
     
     func transferMessageView(amount: Double, isMine: Bool) -> some View {
@@ -128,25 +123,13 @@ struct WechatDemo: View {
             Text("微信转账")
                 .font(.caption2)
         }
-        .padding(.bottom, 6)
-        .foregroundColor(.white)
-        .padding(.horizontal)
+//        .modifier(TransMessage(isMine: isMine))
+        .isTransMessage(isMine: isMine)
+        
 
-        .frame(width: 234, height: 80)
-        .background(RoundedRectangle(cornerRadius: 4).foregroundColor(Color(hex: "FDE1C3")))
-        .overlay(alignment: isMine ? .topTrailing : .topLeading) {
-            messageTriangle(color: Color(hex: "FDE1C3"), isMine: isMine)
-                .padding(.top, 13)
-        }
     }
     
-    func messageTriangle(color: Color, isMine: Bool) -> some View {
-        RoundedRectangle(cornerRadius: 3)
-            .frame(width: 10, height: 10)
-            .foregroundColor(color)
-            .rotationEffect(.degrees(45))
-            .offset(x: isMine ? 5 : -5)
-    }
+
     
     var navigationBar: some View {
         VStack(alignment: .center, spacing: 12) {
@@ -170,11 +153,13 @@ struct WechatDemo: View {
             .overlay {
                 Text("某某某")
                     .font(.title3)
+                  
             }
             
             Rectangle()
                 .foregroundColor(Color(hex: "D5D5D5"))
                 .frame(height: 1)
+            
         }
         .padding(.top, 12)
     }

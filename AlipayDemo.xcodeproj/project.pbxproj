@@ -28,6 +28,7 @@
 		A2CFEDD52D030D43001FD79C /* DemosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFEDD42D030D43001FD79C /* DemosView.swift */; };
 		A2CFEDD72D0336BF001FD79C /* MessagesEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFEDD62D0336BE001FD79C /* MessagesEditView.swift */; };
 		A2CFEDD92D03421A001FD79C /* WechatDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFEDD82D03421A001FD79C /* WechatDemo.swift */; };
+		A2CFEDE22D034745001FD79C /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFEDE12D034745001FD79C /* ViewModifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		A2CFEDD42D030D43001FD79C /* DemosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemosView.swift; sourceTree = "<group>"; };
 		A2CFEDD62D0336BE001FD79C /* MessagesEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesEditView.swift; sourceTree = "<group>"; };
 		A2CFEDD82D03421A001FD79C /* WechatDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WechatDemo.swift; sourceTree = "<group>"; };
+		A2CFEDE12D034745001FD79C /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +102,8 @@
 				A2B033172CE2217D00A06994 /* Assets.xcassets */,
 				A2B033F92CE6F15400A06994 /* Ex.swift */,
 				A2CFEDC62D030129001FD79C /* MVVM */,
+				A2CFEDE02D034724001FD79C /* Desgin */,
 				A2B033F62CE6F0FD00A06994 /* Test */,
-				A2B033F52CE6F0E900A06994 /* Font */,
 				A2B033152CE2217D00A06994 /* Preview Content */,
 			);
 			path = AlipayDemo;
@@ -164,6 +166,15 @@
 				A2CFEDCC2D03018C001FD79C /* WechatDemoViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A2CFEDE02D034724001FD79C /* Desgin */ = {
+			isa = PBXGroup;
+			children = (
+				A2B033F52CE6F0E900A06994 /* Font */,
+				A2CFEDE12D034745001FD79C /* ViewModifiers.swift */,
+			);
+			path = Desgin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +262,7 @@
 				A2B0331C2CE2217D00A06994 /* AlipayDemoApp.swift in Sources */,
 				A2B033262CE4A4BC00A06994 /* InputView.swift in Sources */,
 				A2B0339F2CE5BE1400A06994 /* AnimationTest.swift in Sources */,
+				A2CFEDE22D034745001FD79C /* ViewModifiers.swift in Sources */,
 				A2CFEDCB2D03015A001FD79C /* MainViewModel.swift in Sources */,
 				A2B0331D2CE2217D00A06994 /* ContentView.swift in Sources */,
 				A2B033242CE476E000A06994 /* ImageDemo.swift in Sources */,
