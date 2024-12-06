@@ -23,18 +23,9 @@ func avatarView(_ uiimage: UIImage?) -> some View {
     }
 }
 
-
-
-
-
 struct WechatDemo: View {
     @Environment(\.dismiss) var dismiss
-    @StateObject var vm : WechatDemoViewModel = .init()
-    
-    
-    
-    
-    
+    @StateObject var vm: WechatDemoViewModel = .init()
     
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
@@ -52,17 +43,6 @@ struct WechatDemo: View {
         .ignoresSafeArea(.all, edges: .bottom)
         .background(Color(hex: "EDEDED"))
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     var fakeWechatBottomImage: some View {
         Image("WechatBottomBar")
@@ -114,8 +94,6 @@ struct WechatDemo: View {
         }
     }
     
- 
-    
     func textMessageView(_ text: String, isMine: Bool) -> some View {
         Text(text)
             .padding(.horizontal)
@@ -158,7 +136,6 @@ struct WechatDemo: View {
         .overlay(alignment: isMine ? .topTrailing : .topLeading) {
             messageTriangle(color: Color(hex: "FDE1C3"), isMine: isMine)
                 .padding(.top, 13)
-
         }
     }
     
@@ -204,5 +181,4 @@ struct WechatDemo: View {
 
 #Preview {
     WechatDemo()
-        
 }

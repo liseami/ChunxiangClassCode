@@ -19,7 +19,6 @@
 		A2B033F82CE6F12800A06994 /* AlipayDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B033F72CE6F12800A06994 /* AlipayDemoView.swift */; };
 		A2B033FA2CE6F15400A06994 /* Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B033F92CE6F15400A06994 /* Ex.swift */; };
 		A2B033FC2CE6F38B00A06994 /* SystemUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B033FB2CE6F38B00A06994 /* SystemUIView.swift */; };
-		A2B033FE2CE6F41200A06994 /* WechatDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B033FD2CE6F41200A06994 /* WechatDemo.swift */; };
 		A2CFEDC52D0300F1001FD79C /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFEDC42D0300F1001FD79C /* TabbarView.swift */; };
 		A2CFEDCB2D03015A001FD79C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFEDCA2D03015A001FD79C /* MainViewModel.swift */; };
 		A2CFEDCD2D03018C001FD79C /* WechatDemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFEDCC2D03018C001FD79C /* WechatDemoViewModel.swift */; };
@@ -28,6 +27,7 @@
 		A2CFEDD32D030CF3001FD79C /* ImagePickerSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = A23F34592CF19E8F00FD62CB /* ImagePickerSwiftUI */; };
 		A2CFEDD52D030D43001FD79C /* DemosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFEDD42D030D43001FD79C /* DemosView.swift */; };
 		A2CFEDD72D0336BF001FD79C /* MessagesEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFEDD62D0336BE001FD79C /* MessagesEditView.swift */; };
+		A2CFEDD92D03421A001FD79C /* WechatDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFEDD82D03421A001FD79C /* WechatDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,13 +45,13 @@
 		A2B033F72CE6F12800A06994 /* AlipayDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlipayDemoView.swift; sourceTree = "<group>"; };
 		A2B033F92CE6F15400A06994 /* Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex.swift; sourceTree = "<group>"; };
 		A2B033FB2CE6F38B00A06994 /* SystemUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemUIView.swift; sourceTree = "<group>"; };
-		A2B033FD2CE6F41200A06994 /* WechatDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WechatDemo.swift; sourceTree = "<group>"; };
 		A2CFEDC42D0300F1001FD79C /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		A2CFEDCA2D03015A001FD79C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		A2CFEDCC2D03018C001FD79C /* WechatDemoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WechatDemoViewModel.swift; sourceTree = "<group>"; };
 		A2CFEDCE2D0301D1001FD79C /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		A2CFEDD42D030D43001FD79C /* DemosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemosView.swift; sourceTree = "<group>"; };
 		A2CFEDD62D0336BE001FD79C /* MessagesEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesEditView.swift; sourceTree = "<group>"; };
+		A2CFEDD82D03421A001FD79C /* WechatDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WechatDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +141,8 @@
 				A2CFEDD42D030D43001FD79C /* DemosView.swift */,
 				A2B033182CE2217D00A06994 /* ContentView.swift */,
 				A2CFEDC42D0300F1001FD79C /* TabbarView.swift */,
-				A2B033FD2CE6F41200A06994 /* WechatDemo.swift */,
 				A2B033FB2CE6F38B00A06994 /* SystemUIView.swift */,
+				A2CFEDD82D03421A001FD79C /* WechatDemo.swift */,
 				A2B033F72CE6F12800A06994 /* AlipayDemoView.swift */,
 				A2CFEDD62D0336BE001FD79C /* MessagesEditView.swift */,
 			);
@@ -248,7 +248,6 @@
 			files = (
 				A2B033FC2CE6F38B00A06994 /* SystemUIView.swift in Sources */,
 				A2B033FA2CE6F15400A06994 /* Ex.swift in Sources */,
-				A2B033FE2CE6F41200A06994 /* WechatDemo.swift in Sources */,
 				A2B0331C2CE2217D00A06994 /* AlipayDemoApp.swift in Sources */,
 				A2B033262CE4A4BC00A06994 /* InputView.swift in Sources */,
 				A2B0339F2CE5BE1400A06994 /* AnimationTest.swift in Sources */,
@@ -259,6 +258,7 @@
 				A2CFEDD72D0336BF001FD79C /* MessagesEditView.swift in Sources */,
 				A2B0339B2CE5A97A00A06994 /* Code.swift in Sources */,
 				A2CFEDD52D030D43001FD79C /* DemosView.swift in Sources */,
+				A2CFEDD92D03421A001FD79C /* WechatDemo.swift in Sources */,
 				A2CFEDCF2D0301D1001FD79C /* Message.swift in Sources */,
 				A2B033F82CE6F12800A06994 /* AlipayDemoView.swift in Sources */,
 				A2CFEDC52D0300F1001FD79C /* TabbarView.swift in Sources */,
