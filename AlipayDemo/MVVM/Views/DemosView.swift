@@ -19,6 +19,10 @@ struct DemosView: View {
                 WechatDemo()
                     .navigationBarBackButtonHidden()
             }
+            NavigationLink("历史上的今天") {
+                TodayOfHistory()
+                    .navigationBarBackButtonHidden()
+            }
         }
     }
 }

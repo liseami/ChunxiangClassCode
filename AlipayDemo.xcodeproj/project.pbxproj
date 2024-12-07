@@ -29,6 +29,9 @@
 		A2CFEDD72D0336BF001FD79C /* MessagesEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFEDD62D0336BE001FD79C /* MessagesEditView.swift */; };
 		A2CFEDD92D03421A001FD79C /* WechatDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFEDD82D03421A001FD79C /* WechatDemo.swift */; };
 		A2CFEDE22D034745001FD79C /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFEDE12D034745001FD79C /* ViewModifiers.swift */; };
+		A2CFEDE82D0497A7001FD79C /* TodayOfHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFEDE72D0497A7001FD79C /* TodayOfHistory.swift */; };
+		A2CFEDEA2D049BA3001FD79C /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFEDE92D049BA3001FD79C /* History.swift */; };
+		A2CFEDEC2D049BAF001FD79C /* TodayOfHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFEDEB2D049BAF001FD79C /* TodayOfHistoryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		A2CFEDD62D0336BE001FD79C /* MessagesEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesEditView.swift; sourceTree = "<group>"; };
 		A2CFEDD82D03421A001FD79C /* WechatDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WechatDemo.swift; sourceTree = "<group>"; };
 		A2CFEDE12D034745001FD79C /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
+		A2CFEDE72D0497A7001FD79C /* TodayOfHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayOfHistory.swift; sourceTree = "<group>"; };
+		A2CFEDE92D049BA3001FD79C /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		A2CFEDEB2D049BAF001FD79C /* TodayOfHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayOfHistoryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				A2CFEDD42D030D43001FD79C /* DemosView.swift */,
+				A2CFEDE72D0497A7001FD79C /* TodayOfHistory.swift */,
 				A2B033182CE2217D00A06994 /* ContentView.swift */,
 				A2CFEDC42D0300F1001FD79C /* TabbarView.swift */,
 				A2B033FB2CE6F38B00A06994 /* SystemUIView.swift */,
@@ -155,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				A2CFEDCE2D0301D1001FD79C /* Message.swift */,
+				A2CFEDE92D049BA3001FD79C /* History.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -164,6 +172,7 @@
 			children = (
 				A2CFEDCA2D03015A001FD79C /* MainViewModel.swift */,
 				A2CFEDCC2D03018C001FD79C /* WechatDemoViewModel.swift */,
+				A2CFEDEB2D049BAF001FD79C /* TodayOfHistoryViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -259,6 +268,7 @@
 			files = (
 				A2B033FC2CE6F38B00A06994 /* SystemUIView.swift in Sources */,
 				A2B033FA2CE6F15400A06994 /* Ex.swift in Sources */,
+				A2CFEDEA2D049BA3001FD79C /* History.swift in Sources */,
 				A2B0331C2CE2217D00A06994 /* AlipayDemoApp.swift in Sources */,
 				A2B033262CE4A4BC00A06994 /* InputView.swift in Sources */,
 				A2B0339F2CE5BE1400A06994 /* AnimationTest.swift in Sources */,
@@ -268,7 +278,9 @@
 				A2B033242CE476E000A06994 /* ImageDemo.swift in Sources */,
 				A2CFEDCD2D03018C001FD79C /* WechatDemoViewModel.swift in Sources */,
 				A2CFEDD72D0336BF001FD79C /* MessagesEditView.swift in Sources */,
+				A2CFEDE82D0497A7001FD79C /* TodayOfHistory.swift in Sources */,
 				A2B0339B2CE5A97A00A06994 /* Code.swift in Sources */,
+				A2CFEDEC2D049BAF001FD79C /* TodayOfHistoryViewModel.swift in Sources */,
 				A2CFEDD52D030D43001FD79C /* DemosView.swift in Sources */,
 				A2CFEDD92D03421A001FD79C /* WechatDemo.swift in Sources */,
 				A2CFEDCF2D0301D1001FD79C /* Message.swift in Sources */,
