@@ -1,5 +1,5 @@
 {
-  "originHash" : "ef6192ecf2c34d921866a216988309c125127435531ad088cbd89e177aaa3c04",
+  "originHash" : "d27013abc3f4fe11d80cc435357a0beca48516743c11a878a24f4065c6178923",
   "pins" : [
     {
       "identity" : "imagepickerswiftui",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "9895157231f047340ca248158290b0bc5b9d9cbd",
         "version" : "1.1.6"
+      }
+    },
+    {
+      "identity" : "swifterswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwifterSwift/SwifterSwift.git",
+      "state" : {
+        "revision" : "5a6de915bb80234e1e31b3e3e5f7a7995fc1f4db",
+        "version" : "7.0.0"
       }
     },
     {

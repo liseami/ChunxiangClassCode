@@ -6,17 +6,20 @@
 //
 
 import SwiftUI
-
+import SwifterSwift
 
 class TodayOfHistoryViewModel: ObservableObject {
     // 发布数据列表属性
     @Published var eventList: [HistoryEvent] = []
     @Published var isLoading: Bool = false
     @Published var errorMessage: String? = nil
-    
+    @Published var userSeletedDate : Date = .now
+    var dateP : String {
+        "\(userSeletedDate.month)/\(userSeletedDate.day)"
+    }
     func getData() {
         isLoading = true
-        guard let url = URL(string: "http://v.juhe.cn/todayOnhistory/queryEvent.php?key=e1300567e653b2e517e66f609d006e42&date=12/7") else {
+        guard let url = URL(string: "http://v.juhe.cn/todayOnhistory/queryEvent.php?key=e1300567e653b2e517e66f609d006e42&date=\(dateP)") else {
             errorMessage = "URL写错了"
             isLoading = false
             return
@@ -24,7 +27,9 @@ class TodayOfHistoryViewModel: ObservableObject {
         
         URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
             DispatchQueue.main.async {
-                self?.isLoading = false
+                withAnimation {
+                    self?.isLoading = false
+                }
                 
                 if let error = error {
                     self?.errorMessage = error.localizedDescription

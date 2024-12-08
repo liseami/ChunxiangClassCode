@@ -32,6 +32,7 @@
 		A2CFEDE82D0497A7001FD79C /* TodayOfHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFEDE72D0497A7001FD79C /* TodayOfHistory.swift */; };
 		A2CFEDEA2D049BA3001FD79C /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFEDE92D049BA3001FD79C /* History.swift */; };
 		A2CFEDEC2D049BAF001FD79C /* TodayOfHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFEDEB2D049BAF001FD79C /* TodayOfHistoryViewModel.swift */; };
+		A2CFEDEF2D05953C001FD79C /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A2CFEDEE2D05953C001FD79C /* SwifterSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2CFEDEF2D05953C001FD79C /* SwifterSwift in Frameworks */,
 				A2CFEDD32D030CF3001FD79C /* ImagePickerSwiftUI in Frameworks */,
 				A2CFEDD22D03068A001FD79C /* Toasts in Frameworks */,
 			);
@@ -205,6 +207,7 @@
 			packageProductDependencies = (
 				A23F34592CF19E8F00FD62CB /* ImagePickerSwiftUI */,
 				A2CFEDD12D03068A001FD79C /* Toasts */,
+				A2CFEDEE2D05953C001FD79C /* SwifterSwift */,
 			);
 			productName = AlipayDemo;
 			productReference = A2B033032CE2217400A06994 /* AlipayDemo.app */;
@@ -237,6 +240,7 @@
 			packageReferences = (
 				A23F34582CF19E8F00FD62CB /* XCRemoteSwiftPackageReference "ImagePickerSwiftUI" */,
 				A2CFEDD02D03068A001FD79C /* XCRemoteSwiftPackageReference "swiftui-toasts" */,
+				A2CFEDED2D05953C001FD79C /* XCRemoteSwiftPackageReference "SwifterSwift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A2B033042CE2217400A06994 /* Products */;
@@ -511,6 +515,14 @@
 				minimumVersion = 0.2.0;
 			};
 		};
+		A2CFEDED2D05953C001FD79C /* XCRemoteSwiftPackageReference "SwifterSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwifterSwift/SwifterSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -523,6 +535,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A2CFEDD02D03068A001FD79C /* XCRemoteSwiftPackageReference "swiftui-toasts" */;
 			productName = Toasts;
+		};
+		A2CFEDEE2D05953C001FD79C /* SwifterSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A2CFEDED2D05953C001FD79C /* XCRemoteSwiftPackageReference "SwifterSwift" */;
+			productName = SwifterSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
