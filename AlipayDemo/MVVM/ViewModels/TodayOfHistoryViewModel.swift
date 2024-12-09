@@ -17,13 +17,14 @@ class TodayOfHistoryViewModel: ObservableObject {
     var dateP : String {
         "\(userSeletedDate.month)/\(userSeletedDate.day)"
     }
-    func getData() {
+    func getData() -> Void  {
         isLoading = true
         guard let url = URL(string: "http://v.juhe.cn/todayOnhistory/queryEvent.php?key=e1300567e653b2e517e66f609d006e42&date=\(dateP)") else {
             errorMessage = "URL写错了"
             isLoading = false
             return
         }
+        
         
         URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
             DispatchQueue.main.async {

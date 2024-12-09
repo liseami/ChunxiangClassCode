@@ -33,6 +33,7 @@
 		A2CFEDEA2D049BA3001FD79C /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFEDE92D049BA3001FD79C /* History.swift */; };
 		A2CFEDEC2D049BAF001FD79C /* TodayOfHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFEDEB2D049BAF001FD79C /* TodayOfHistoryViewModel.swift */; };
 		A2CFEDEF2D05953C001FD79C /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A2CFEDEE2D05953C001FD79C /* SwifterSwift */; };
+		A2CFEDF12D05E8BA001FD79C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFEDF02D05E8BA001FD79C /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		A2CFEDE72D0497A7001FD79C /* TodayOfHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayOfHistory.swift; sourceTree = "<group>"; };
 		A2CFEDE92D049BA3001FD79C /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		A2CFEDEB2D049BAF001FD79C /* TodayOfHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayOfHistoryViewModel.swift; sourceTree = "<group>"; };
+		A2CFEDF02D05E8BA001FD79C /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				A2CFEDE72D0497A7001FD79C /* TodayOfHistory.swift */,
 				A2B033182CE2217D00A06994 /* ContentView.swift */,
 				A2CFEDC42D0300F1001FD79C /* TabbarView.swift */,
+				A2CFEDF02D05E8BA001FD79C /* CustomButton.swift */,
 				A2B033FB2CE6F38B00A06994 /* SystemUIView.swift */,
 				A2CFEDD82D03421A001FD79C /* WechatDemo.swift */,
 				A2B033F72CE6F12800A06994 /* AlipayDemoView.swift */,
@@ -281,6 +284,7 @@
 				A2B0331D2CE2217D00A06994 /* ContentView.swift in Sources */,
 				A2B033242CE476E000A06994 /* ImageDemo.swift in Sources */,
 				A2CFEDCD2D03018C001FD79C /* WechatDemoViewModel.swift in Sources */,
+				A2CFEDF12D05E8BA001FD79C /* CustomButton.swift in Sources */,
 				A2CFEDD72D0336BF001FD79C /* MessagesEditView.swift in Sources */,
 				A2CFEDE82D0497A7001FD79C /* TodayOfHistory.swift in Sources */,
 				A2B0339B2CE5A97A00A06994 /* Code.swift in Sources */,

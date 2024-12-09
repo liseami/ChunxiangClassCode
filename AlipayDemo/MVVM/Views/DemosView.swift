@@ -23,6 +23,10 @@ struct DemosView: View {
                 TodayOfHistory()
                     .navigationBarBackButtonHidden()
             }
+            NavigationLink("BMI计算器") {
+                TodayOfHistory()
+                    .navigationBarBackButtonHidden()
+            }
         }
     }
 }
@@ -30,6 +34,5 @@ struct DemosView: View {
 #Preview {
     NavigationView {
         DemosView()
-            
     }
 }

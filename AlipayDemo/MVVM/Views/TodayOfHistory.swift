@@ -18,14 +18,25 @@ struct TodayOfHistory: View {
                 .datePickerStyle(.compact)
                 .padding(.trailing, 32)
                 Spacer()
-                Button {
-                    vm.getData()
-                } label: {
-                    Text("获取数据")
-                }
-                .buttonStyle(.bordered)
+                
+//                CustomButton(text: "获取数据")
+//                Button {
+//                    vm.getData()
+//                } label: {
+//                    Text("获取数据")
+//                }
+//                .buttonStyle(.bordered)
+
             }
             .padding(.horizontal)
+            
+            CustomButton { _ in
+                vm.getData()
+            }
+//            CustomButton(text: "获取数据") { str in
+//                print(str)
+//                vm.getData()
+//            }
 //            row(.init(day: "12月17日", date: "1889年12月7日", title: "第一个充气轮胎受专利保护", e_id: "14883"))
             if vm.isLoading {
                 ProgressView()
